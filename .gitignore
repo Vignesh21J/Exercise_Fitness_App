@@ -1,0 +1,4 @@
+# Ignore .env files
+.env
+fitness_exercise_app/.env
+proxy-server/.env
