@@ -1,67 +1,4 @@
-// import React, { useEffect } from 'react';
-// import { Box, Stack, Typography } from '@mui/material';
-
-// import { exerciseOptions, fetchData } from '../utils/fetchData';
-
-// import ExerciseCard from './ExerciseCard';
-
-// const Exercises = ({ exercises, setExercises, bodyPart }) => {
-  
-//   useEffect(() => {
-//     const fetchExercises = async () => {
-//       let exercisesData = [];
-      
-//       if (bodyPart === 'all') {
-//         exercisesData = await fetchData('https://exercisedb.p.rapidapi.com/exercises?limit=1000', exerciseOptions);
-        
-//       } else {
-//         exercisesData = await fetchData(`https://exercisedb.p.rapidapi.com/exercises/bodyPart/${bodyPart}`, exerciseOptions);
-//       }
-      
-//       setExercises(exercisesData);
-//     };
-    
-//     fetchExercises();
-//   }, [bodyPart, setExercises]);  // Runs whenever bodyPart or setExercises updates
-
-// //   console.log(exercises);
-// //   console.log("Type of exercises:", typeof exercises);
-// //   console.log("Is Array:", Array.isArray(exercises));
-// //   console.log("Value:", exercises);
-
-//   return (
-//     <Box id="exercises" 
-//       sx={{ mt: { lg: '112px' } }} 
-//       mt="50px" p="20px"
-//     >
-//       <Typography variant="h3" fontWeight="bold" sx={{ fontSize: { lg: '44px', xs: '30px' } }} mb="46px">
-//             Showing Results
-//       </Typography>
-
-//       <Stack direction="row" 
-//         sx={{ gap: { lg: '107px', xs: '50px' } }} 
-//         flexWrap="wrap" justifyContent="center"
-//       >        
-
-//         {/* {exercises.map((exercise, index) => (
-//           <ExerciseCard key={exercise.id} exercise={exercise} />    
-//         ))} */}
-
-//         {Array.isArray(exercises) ? (
-//             exercises.map((exercise, index) => (
-//                 <ExerciseCard key={exercise.id || index} exercise={exercise} />
-//             ))
-//             ) : (
-//             <Typography color="error">No valid exercises found.</Typography>
-//         )}  
-//       </Stack>
-//     </Box>
-//   )
-// };
-
-// export default Exercises;
-
-
+// eslint-disable-next-line react-hooks/exhaustive-deps
 
 
 
@@ -89,7 +26,7 @@ const Exercises = ({ exercises, setExercises, bodyPart }) => {
       };
 
       fetchExercises();
-    }, [bodyPart]);
+    }, [bodyPart, setExercises]);
 
   // Pagination logic
   const indexOfLastExercise = currentPage * exercisesPerPage;
