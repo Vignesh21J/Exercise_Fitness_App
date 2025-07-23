@@ -2,7 +2,7 @@ import React from 'react';
 
 const ExerciseImage = ({ exerciseId }) => {
   const resolution = "180";
-  const imageUrl = `http://localhost:5000/api/image/${exerciseId}?resolution=${resolution}`;
+  const imageUrl = `https://exercise-fitness-backend-app.onrender.com/api/image/${exerciseId}?resolution=${resolution}`;
 
   return (
     <div style={{ display: "flex", justifyContent: "center", alignItems: "center" }}>

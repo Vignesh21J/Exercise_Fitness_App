@@ -4,7 +4,6 @@ console.log('[DEBUG] ENV path =', envPath);
 
 require('dotenv').config({ path: envPath });
 
-console.log('[DEBUG] Key =', process.env.RAPIDAPI_KEY);
 
 const express = require('express');
 const axios = require('axios');
